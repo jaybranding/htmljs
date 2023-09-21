@@ -70,7 +70,7 @@
 //khi event click vo nut co id prev thi thuc hien function prevclick
 
 function prevclick() {
-  currentPosition = currentPosition - 300;
+  currentPosition = currentPosition + 300;
   document.querySelector("#jcontainer").style.transform =  "translateX("+ currentPosition + "px)";
   console.log(currentPosition)
   //phát triển xa hơn ở version tiếp thì em đặt 1 biến, biến này sẽ được đặt ví dụ là width= 300, 
@@ -85,7 +85,7 @@ function prevclick() {
 }
 
 function nextclick() {
-  currentPosition = currentPosition + 300;
+  currentPosition = currentPosition - 300;
   document.querySelector("#jcontainer").style.transform =  "translateX("+ currentPosition + "px)";
   console.log(currentPosition)
 }
