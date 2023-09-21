@@ -51,7 +51,7 @@
     <div class="jslider">
       <div class="jcontainer" id="jcontainer">
         <div class="slide">Hello</div>
-        <div class="slide">Hello</div>
+        <div class="slide active">Hello</div>
         <div class="slide">Hello</div>
       </div>
     </div>
@@ -63,11 +63,31 @@
 
     <script>
         document.getElementById("prev").addEventListener("click", prevclick);
+        document.getElementById("next").addEventListener("click", nextclick);
+
+        var currentPosition = 0;
+
+//khi event click vo nut co id prev thi thuc hien function prevclick
 
 function prevclick() {
-  document.querySelector("#jcontainer").style.transform =  "translateX(-300px)";
+  currentPosition = currentPosition - 300;
+  document.querySelector("#jcontainer").style.transform =  "translateX("+ currentPosition + "px)";
+  console.log(currentPosition)
   //phát triển xa hơn ở version tiếp thì em đặt 1 biến, biến này sẽ được đặt ví dụ là width= 300, 
   //thì khi đó em dùng biến cho chiều dài và tăng dần đều cái translateX
+
+  //vi du khai bao bien currentposition = 0
+  //"translateX(-300px)";
+  //currentposition = currentpostiion - 300
+    //"translateX(-currentpostiion)";
+
+
+}
+
+function nextclick() {
+  currentPosition = currentPosition + 300;
+  document.querySelector("#jcontainer").style.transform =  "translateX("+ currentPosition + "px)";
+  console.log(currentPosition)
 }
     </script>
   </body>
