@@ -38,35 +38,20 @@
         flex-wrap: nowrap;
         background-color: aliceblue;
         width: 1200px;
-        transition: 1s;
       }
       .jslider{
         width: 320px;
         overflow-x: scroll;
       }
     </style>
-
   </head>
   <body>
     <div class="jslider">
-      <div class="jcontainer" id="jcontainer">
+      <div class="jcontainer">
         <div class="slide">Hello</div>
         <div class="slide">Hello</div>
         <div class="slide">Hello</div>
       </div>
     </div>
-
-    <div>
-        <button id="prev">prev</button>
-        <button id="next">next</button>
-    </div>
-
-    <script>
-        document.getElementById("prev").addEventListener("click", prevclick);
-
-function prevclick() {
-  document.querySelector("#jcontainer").style.transform =  "translateX(-300px)";
-}
-    </script>
   </body>
 </html>
