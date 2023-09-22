@@ -85,8 +85,8 @@ function nextclick() {
 //touch event
 
 
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
+document.querySelector("#jcontainer").addEventListener('touchstart', handleTouchStart, false);        
+document.querySelector("#jcontainer").addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;                                                        
 var yDown = null;
